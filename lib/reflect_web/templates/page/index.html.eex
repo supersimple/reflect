@@ -1,0 +1,68 @@
+<div id="left-col">
+  <h1 id="time"></h1>
+  <h1 id="date"></h1>
+</div>
+<div id="right-col">
+  <div id="current_weather">
+    <img src="<%= @current_weather_icon %>" class="icon" />
+    <h1 class="temp"><%= @current_weather_temp %></h1>
+  </div>
+  <ol>
+    <li id="day_one_weather">
+      <h2 class="high_temp"><%= @day_one_weather_high_temp %></h2>
+      <h2 class="low_temp"><%= @day_one_weather_low_temp %></h2>
+      <img src="<%= @day_one_weather_icon %>" class="icon" />
+    </li>
+    <li id="day_two_weather">
+      <h2 class="high_temp"><%= @day_two_weather_high_temp %></h2>
+      <h2 class="low_temp"><%= @day_two_weather_low_temp %></h2>
+      <img src="<%= @day_two_weather_icon %>" class="icon" />
+    </li>
+    <li id="day_three_weather">
+      <h2 class="high_temp"><%= @day_three_weather_high_temp %></h2>
+      <h2 class="low_temp"><%= @day_three_weather_low_temp %></h2>
+      <img src="<%= @day_three_weather_icon %>" class="icon" />
+    </li>
+    <li id="day_four_weather">
+      <h2 class="high_temp"><%= @day_four_weather_high_temp %></h2>
+      <h2 class="low_temp"><%= @day_four_weather_low_temp %></h2>
+      <img src="<%= @day_four_weather_icon %>" class="icon" />
+    </li>
+    <li id="day_five_weather">
+      <h2 class="high_temp"><%= @day_five_weather_high_temp %></h2>
+      <h2 class="low_temp"><%= @day_five_weather_low_temp %></h2>
+      <img src="<%= @day_five_weather_icon %>" class="icon" />
+    </li>
+    <li id="day_six_weather">
+      <h2 class="high_temp"><%= @day_six_weather_high_temp %></h2>
+      <h2 class="low_temp"><%= @day_six_weather_low_temp %></h2>
+      <img src="<%= @day_six_weather_icon %>" class="icon" />
+    </li>
+  </ol>
+</div>
+
+
+<script>
+  (function () {
+    function checkTime(i) {
+        return (i < 10) ? "0" + i : i;
+    }
+
+    function startTime() {
+        var today = new Date(),
+            mm = checkTime(today.getMonth()),
+            dd = checkTime(today.getDate()),
+            h = checkTime(today.getHours()),
+            m = checkTime(today.getMinutes()),
+            s = checkTime(today.getSeconds());
+        document.getElementById('time').innerHTML = h + ":" + m;
+        locale = "en-us",
+        month = today.toLocaleString(locale, { month: "short" })
+        document.getElementById('date').innerHTML = month + " " + dd;
+        t = setTimeout(function () {
+            startTime()
+        }, 3000);
+    }
+    startTime();
+  })();
+</script>
