@@ -28,6 +28,6 @@ defmodule Reflect.Recur do
   end
 
   defp schedule_work() do
-    Process.send_after(self(), :work, 2 * 60 * 1000)
+    Process.send_after(self(), :work, 5 * 60 * 1000)
   end
 end
