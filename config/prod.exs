@@ -15,7 +15,7 @@ use Mix.Config
 # which you typically run after static files are built.
 config :reflect, ReflectWeb.Endpoint,
   load_from_system_env: true,
-  url: [host: "127.0.0.1", port: 80],
+  url: [host: "example.com", port: 80],
   cache_static_manifest: "priv/static/cache_manifest.json",
   server: true,
   secret_key_base: "${SECRET_KEY_BASE}"
