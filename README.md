@@ -1,5 +1,10 @@
 # Reflect
 
+## To configure your local weather:
+Open `config.exs` and set the configurations for darkskyx.
+Supply your api key, longitude, and latitude.
+Darksky API keys are available from: [https://darksky.net/dev](https://darksky.net/dev)
+
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
