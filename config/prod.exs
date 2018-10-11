@@ -15,7 +15,8 @@ use Mix.Config
 # which you typically run after static files are built.
 config :reflect, ReflectWeb.Endpoint,
   load_from_system_env: true,
-  url: [host: "flickering-key-nandu-64bcccdcf8-ccfw4", port: 80],
+  url: [host: "flickering-key-nandu.gigalixirapp.com", port: 80],
+  check_origin: ["https://flickering-key-nandu.gigalixirapp.com", "https://humid.cloud"],
   cache_static_manifest: "priv/static/cache_manifest.json",
   server: true,
   secret_key_base: "${SECRET_KEY_BASE}"
