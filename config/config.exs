@@ -10,7 +10,8 @@ config :reflect, ReflectWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "IOcVu6uvH+aoPmi+Yr2JQdOz04f+cH6mo8KqXIIbNCtiz5BnfMcoczrWnJp5WgJ7",
   render_errors: [view: ReflectWeb.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: Reflect.PubSub, adapter: Phoenix.PubSub.PG2]
+  pubsub: [name: Reflect.PubSub, adapter: Phoenix.PubSub.PG2],
+  version: "0.1.0"
 
 config :darkskyx,
   api_key: System.get_env("DARKSKY_API_KEY"),
