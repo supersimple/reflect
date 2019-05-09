@@ -1,6 +1,9 @@
 defmodule Reflect.Recur do
   use GenServer
 
+  # 15 minutes
+  @interval 15 * 60 * 1000
+
   def start_link do
     GenServer.start_link(__MODULE__, %{}, name: __MODULE__)
   end
@@ -28,6 +31,6 @@ defmodule Reflect.Recur do
   end
 
   defp schedule_work() do
-    Process.send_after(self(), :work, 5 * 60 * 1000)
+    Process.send_after(self(), :work, @interval)
   end
 end
