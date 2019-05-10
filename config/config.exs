@@ -5,6 +5,8 @@
 # is restricted to this project.
 use Mix.Config
 
+config :phoenix, :json_library, Jason
+
 # Configures the endpoint
 config :reflect, ReflectWeb.Endpoint,
   url: [host: "localhost"],
