@@ -10,10 +10,10 @@ defmodule Reflect.Mirror do
   ]
 
   def fetch do
-    darkskyx = Application.get_env(:darkskyx, :defaults)
+    dark_jason = Application.get_env(:dark_jason, :defaults)
 
     {:ok, %{"currently" => currently, "daily" => %{"data" => forecast}}} =
-      Darkskyx.forecast(darkskyx[:latitude], darkskyx[:longitude], %Darkskyx{
+      DarkJason.forecast(dark_jason[:latitude], dark_jason[:longitude], %DarkJason{
         exclude: "minutely,hourly"
       })
 

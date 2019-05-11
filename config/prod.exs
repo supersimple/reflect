@@ -21,7 +21,7 @@ config :reflect, ReflectWeb.Endpoint,
   server: true,
   secret_key_base: "${SECRET_KEY_BASE}"
 
-config :darkskyx, api_key: "${DARKSKY_API_KEY}"
+config :dark_jason, api_key: "${DARKSKY_API_KEY}"
 
 # Do not print debug messages in production
 config :logger, level: :info

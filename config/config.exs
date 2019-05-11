@@ -18,7 +18,7 @@ config :reflect, ReflectWeb.Endpoint,
   version: "0.1.0",
   live_view: [signing_salt: "lgJ7h3zJi9I81YpI8Fos7TIxiVhdd7hPOn4wVRxFMunMjol56Nn16D0diUZTR8Kj"]
 
-config :darkskyx,
+config :dark_jason,
   api_key: System.get_env("DARKSKY_API_KEY"),
   defaults: [
     units: "us",
