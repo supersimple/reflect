@@ -39,7 +39,7 @@ defmodule Reflect.Mixfile do
       {:jason, "~> 1.0"},
       {:gettext, "~> 0.11"},
       {:plug_cowboy, "~> 2.0"},
-      {:dark_jason, "~> 0.1.5"},
+      {:dark_jason, "~> 0.1.6"},
       {:distillery, "~> 1.5", runtime: false},
       {:timex, "~> 3.5"},
       {:phoenix_live_view, github: "phoenixframework/phoenix_live_view"}
