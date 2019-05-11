@@ -2,7 +2,7 @@ defmodule Reflect.Recur do
   use GenServer
 
   # 15 minutes
-  @interval 1 * 60 * 1000
+  @interval 15 * 60 * 1000
 
   def start_link do
     GenServer.start_link(__MODULE__, %{}, name: __MODULE__)
