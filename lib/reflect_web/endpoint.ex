@@ -1,6 +1,8 @@
 defmodule ReflectWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :reflect
 
+  socket("/live", Phoenix.LiveView.Socket)
+
   socket("/socket", ReflectWeb.UserSocket,
     # Phoenix.Transports.WebSocket
     websocket: true

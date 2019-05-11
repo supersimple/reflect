@@ -23,7 +23,6 @@ defmodule Reflect.Recur do
   end
 
   def handle_info(:work, _state) do
-    IO.puts("Fetching Data")
     mirror = Reflect.Mirror.fetch()
     ReflectWeb.Endpoint.broadcast("mirror:data", "new_data", mirror)
     schedule_work()

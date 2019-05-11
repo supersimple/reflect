@@ -5,7 +5,9 @@
 # is restricted to this project.
 use Mix.Config
 
-config :phoenix, :json_library, Jason
+config :phoenix,
+  json_library: Jason,
+  template_engines: [leex: Phoenix.LiveView.Engine]
 
 # Configures the endpoint
 config :reflect, ReflectWeb.Endpoint,
@@ -13,7 +15,8 @@ config :reflect, ReflectWeb.Endpoint,
   secret_key_base: "IOcVu6uvH+aoPmi+Yr2JQdOz04f+cH6mo8KqXIIbNCtiz5BnfMcoczrWnJp5WgJ7",
   render_errors: [view: ReflectWeb.ErrorView, accepts: ~w(html json)],
   pubsub: [name: Reflect.PubSub, adapter: Phoenix.PubSub.PG2],
-  version: "0.1.0"
+  version: "0.1.0",
+  live_view: [signing_salt: "lgJ7h3zJi9I81YpI8Fos7TIxiVhdd7hPOn4wVRxFMunMjol56Nn16D0diUZTR8Kj"]
 
 config :darkskyx,
   api_key: System.get_env("DARKSKY_API_KEY"),
