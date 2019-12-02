@@ -42,7 +42,7 @@ defmodule Reflect.Mixfile do
       {:dark_jason, "~> 0.1.8"},
       {:distillery, "~> 1.5", runtime: false},
       {:timex, "~> 3.5"},
-      {:phoenix_live_view, github: "phoenixframework/phoenix_live_view"}
+      {:phoenix_live_view, ">= 0.0.0"}
     ]
   end
 end

@@ -5,7 +5,8 @@ defmodule ReflectWeb.Endpoint do
 
   socket("/socket", ReflectWeb.UserSocket,
     # Phoenix.Transports.WebSocket
-    websocket: true
+    websocket: true,
+    longpoll: false
   )
 
   # Serve at "/" the static files from "priv/static" directory.

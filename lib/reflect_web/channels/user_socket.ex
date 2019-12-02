@@ -2,7 +2,7 @@ defmodule ReflectWeb.UserSocket do
   use Phoenix.Socket
 
   ## Channels
-  channel("mirror:*", ReflectWeb.MirrorChannel)
+  ## channel("mirror:*", ReflectWeb.MirrorChannel)
   ## Transports
 
   # Socket params are passed from the client and can

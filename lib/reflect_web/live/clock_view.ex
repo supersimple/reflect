@@ -10,26 +10,25 @@ defmodule ReflectWeb.ClockView do
     """
   end
 
-  def mount(session, socket) do
-    session = Map.merge(session, %{current_time: "", current_seconds: "", current_date: ""})
-    schedule_work()
-    {:ok, assign(socket, session)}
+  def mount(_session, socket) do
+    if connected?(socket), do: :timer.send_interval(1000, self(), :tick)
+
+    {:ok, put_date(socket)}
   end
 
-  def handle_info(:work, socket) do
-    current = Timex.now(-6)
-    schedule_work()
-
-    {:noreply,
-     assign(socket,
-       current_time: current_time(current),
-       current_date: current_date(current),
-       current_seconds: current_seconds(current)
-     )}
+  def handle_info(:tick, socket) do
+    {:noreply, put_date(socket)}
   end
 
-  def schedule_work() do
-    Process.send_after(self(), :work, 1000)
+  defp put_date(socket) do
+    current = Timex.now(-7)
+
+    assign(
+      socket,
+      current_time: current_time(current),
+      current_date: current_date(current),
+      current_seconds: current_seconds(current)
+    )
   end
 
   def current_date(current) do
