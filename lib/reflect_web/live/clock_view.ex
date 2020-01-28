@@ -1,5 +1,7 @@
 defmodule ReflectWeb.ClockView do
   use Phoenix.LiveView
+  
+  @interval 1000
 
   def render(assigns) do
     ~L"""
@@ -11,7 +13,7 @@ defmodule ReflectWeb.ClockView do
   end
 
   def mount(_session, socket) do
-    if connected?(socket), do: :timer.send_interval(1000, self(), :tick)
+    if connected?(socket), do: :timer.send_interval(@interval, self(), :tick)
 
     {:ok, put_date(socket)}
   end
