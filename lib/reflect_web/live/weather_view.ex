@@ -12,34 +12,34 @@ defmodule ReflectWeb.WeatherView do
       </div>
       <ol>
         <li id="day_one_weather">
-          <h2 class="high_temp"><%= @day_one_weather[:high] %></h2>
-          <h2 class="low_temp"><%= @day_one_weather[:low] %></h2>
-          <img src="<%= @day_one_weather[:icon] %>" class="icon" />
+          <h2 class="high_temp"><%= @day_one_weather.max_temp %></h2>
+          <h2 class="low_temp"><%= @day_one_weather.min_temp %></h2>
+          <img src="images/<%= @day_one_weather.icon %>.png" class="icon" />
         </li>
         <li id="day_two_weather">
-          <h2 class="high_temp"><%= @day_two_weather[:high] %></h2>
-          <h2 class="low_temp"><%= @day_two_weather[:low] %></h2>
-          <img src="<%= @day_two_weather[:icon] %>" class="icon" />
+          <h2 class="high_temp"><%= @day_two_weather.max_temp %></h2>
+          <h2 class="low_temp"><%= @day_two_weather.min_temp %></h2>
+          <img src="images/<%= @day_two_weather.icon %>.png" class="icon" />
         </li>
         <li id="day_three_weather">
-          <h2 class="high_temp"><%= @day_three_weather[:high] %></h2>
-          <h2 class="low_temp"><%= @day_three_weather[:low] %></h2>
-          <img src="<%= @day_three_weather[:icon] %>" class="icon" />
+          <h2 class="high_temp"><%= @day_three_weather.max_temp %></h2>
+          <h2 class="low_temp"><%= @day_three_weather.min_temp %></h2>
+          <img src="images/<%= @day_three_weather.icon %>.png" class="icon" />
         </li>
         <li id="day_four_weather">
-          <h2 class="high_temp"><%= @day_four_weather[:high] %></h2>
-          <h2 class="low_temp"><%= @day_four_weather[:low] %></h2>
-          <img src="<%= @day_four_weather[:icon] %>" class="icon" />
+          <h2 class="high_temp"><%= @day_four_weather.max_temp %></h2>
+          <h2 class="low_temp"><%= @day_four_weather.min_temp %></h2>
+          <img src="images/<%= @day_four_weather.icon %>.png" class="icon" />
         </li>
         <li id="day_five_weather">
-          <h2 class="high_temp"><%= @day_five_weather[:high] %></h2>
-          <h2 class="low_temp"><%= @day_five_weather[:low] %></h2>
-          <img src="<%= @day_five_weather[:icon] %>" class="icon" />
+          <h2 class="high_temp"><%= @day_five_weather.max_temp %></h2>
+          <h2 class="low_temp"><%= @day_five_weather.min_temp %></h2>
+          <img src="images/<%= @day_five_weather.icon %>.png" class="icon" />
         </li>
         <li id="day_six_weather">
-          <h2 class="high_temp"><%= @day_six_weather[:high] %></h2>
-          <h2 class="low_temp"><%= @day_six_weather[:low] %></h2>
-          <img src="<%= @day_six_weather[:icon] %>" class="icon" />
+          <h2 class="high_temp"><%= @day_six_weather.max_temp %></h2>
+          <h2 class="low_temp"><%= @day_six_weather.min_temp %></h2>
+          <img src="images/<%= @day_six_weather.icon %>.png" class="icon" />
         </li>
       </ol>
     </div>

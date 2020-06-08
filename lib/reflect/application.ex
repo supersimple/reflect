@@ -8,7 +8,8 @@ defmodule Reflect.Application do
 
     # Define workers and child supervisors to be supervised
     children = [
-      supervisor(ReflectWeb.Endpoint, [])
+      supervisor(ReflectWeb.Endpoint, []),
+      {Finch, name: ReflectHTTP}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

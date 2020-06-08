@@ -18,14 +18,10 @@ config :reflect, ReflectWeb.Endpoint,
   version: "0.1.0",
   live_view: [signing_salt: "lgJ7h3zJi9I81YpI8Fos7TIxiVhdd7hPOn4wVRxFMunMjol56Nn16D0diUZTR8Kj"]
 
-config :dark_jason,
-  api_key: System.get_env("DARKSKY_API_KEY"),
-  defaults: [
-    units: "us",
-    lang: "en",
-    longitude: -104.828918,
-    latitude: 39.388763
-  ]
+config :reflect,
+  climacell_api_key: System.get_env("CLIMACELL_API_KEY"),
+  longitude: -104.828918,
+  latitude: 39.388763
 
 # Configures Elixir's Logger
 config :logger, :console,

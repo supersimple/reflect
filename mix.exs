@@ -37,9 +37,9 @@ defmodule Reflect.Mixfile do
       {:phoenix_html, "~> 2.10"},
       {:phoenix_live_reload, "~> 1.0", only: :dev},
       {:jason, "~> 1.0"},
+      {:finch, "~> 0.2.0"},
       {:gettext, "~> 0.11"},
       {:plug_cowboy, "~> 2.0"},
-      {:dark_jason, "~> 0.1.8"},
       {:distillery, "~> 1.5", runtime: false},
       {:timex, "~> 3.5"},
       {:phoenix_live_view, ">= 0.0.0"}
