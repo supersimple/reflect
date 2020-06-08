@@ -1,6 +1,6 @@
 defmodule ReflectWeb.ClockView do
   use Phoenix.LiveView
-  
+
   @interval 1000
 
   def render(assigns) do
@@ -23,7 +23,7 @@ defmodule ReflectWeb.ClockView do
   end
 
   defp put_date(socket) do
-    current = Timex.now(-7)
+    current = Timex.now(-6)
 
     assign(
       socket,
