@@ -4,7 +4,7 @@ defmodule Reflect.Mixfile do
   def project do
     [
       app: :reflect,
-      version: "2.0.6",
+      version: "2.1.0",
       elixir: "~> 1.8",
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: [:phoenix, :gettext] ++ Mix.compilers(),
@@ -42,7 +42,8 @@ defmodule Reflect.Mixfile do
       {:plug_cowboy, "~> 2.0"},
       {:distillery, "~> 1.5", runtime: false},
       {:timex, "~> 3.5"},
-      {:phoenix_live_view, ">= 0.0.0"}
+      {:phoenix_live_view, ">= 0.0.0"},
+      {:rollbax, ">= 0.0.0"}
     ]
   end
 end
