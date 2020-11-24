@@ -1,0 +1,42 @@
+<div id="left-col">
+  <h1 id="time"><%= @current_time %><span id="secs"><%= @current_seconds %><span></h1>
+  <h1 id="date"><%= @current_date %></h1>
+</div>
+<div id="right-col">
+  <div id="current_weather">
+    <img src="<%= @weather_data[:current_weather].icon %>" class="icon" />
+    <h1 class="temp"><%= @weather_data[:current_weather][:temperature] %></h1>
+  </div>
+  <ol>
+    <li id="day_one_weather">
+      <h2 class="high_temp"><%= @weather_data[:day_one_weather].max_temp %></h2>
+      <h2 class="low_temp"><%= @weather_data[:day_one_weather].min_temp %></h2>
+      <img src="images/<%= @weather_data[:day_one_weather].icon %>.png" class="icon" />
+    </li>
+    <li id="day_two_weather">
+      <h2 class="high_temp"><%= @weather_data[:day_two_weather].max_temp %></h2>
+      <h2 class="low_temp"><%= @weather_data[:day_two_weather].min_temp %></h2>
+      <img src="images/<%= @weather_data[:day_two_weather].icon %>.png" class="icon" />
+    </li>
+    <li id="day_three_weather">
+      <h2 class="high_temp"><%= @weather_data[:day_three_weather].max_temp %></h2>
+      <h2 class="low_temp"><%= @weather_data[:day_three_weather].min_temp %></h2>
+      <img src="images/<%= @weather_data[:day_three_weather].icon %>.png" class="icon" />
+    </li>
+    <li id="day_four_weather">
+      <h2 class="high_temp"><%= @weather_data[:day_four_weather].max_temp %></h2>
+      <h2 class="low_temp"><%= @weather_data[:day_four_weather].min_temp %></h2>
+      <img src="images/<%= @weather_data[:day_four_weather].icon %>.png" class="icon" />
+    </li>
+    <li id="day_five_weather">
+      <h2 class="high_temp"><%= @weather_data[:day_five_weather].max_temp %></h2>
+      <h2 class="low_temp"><%= @weather_data[:day_five_weather].min_temp %></h2>
+      <img src="images/<%= @weather_data[:day_five_weather].icon %>.png" class="icon" />
+    </li>
+    <li id="day_six_weather">
+      <h2 class="high_temp"><%= @weather_data[:day_six_weather].max_temp %></h2>
+      <h2 class="low_temp"><%= @weather_data[:day_six_weather].min_temp %></h2>
+      <img src="images/<%= @weather_data[:day_six_weather].icon %>.png" class="icon" />
+    </li>
+  </ol>
+</div>

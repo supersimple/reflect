@@ -1,0 +1,99 @@
+/* This file is for your main application css. */
+$font-stack: 'Montserrat', sans-serif;
+$font-weight: 200;
+$bold-font-weight: 400;
+
+html{overflow:hidden;}
+body{
+  background-color: #000;
+  font-family: $font-stack;
+  font-weight: $font-weight;
+  color: #fff;
+  padding:0;
+  margin:0;
+
+  #main-container{
+    width:960px;
+    height:1900px;
+    margin: 30px 70px 0px 50px;
+
+    div#left-col{
+      float:left;
+      width:50%;
+
+      h1#time{
+        font-weight: $font-weight;
+        font-size: 108px;
+        margin: 0;
+        padding: 18px 0 0 18px;
+        line-height:108px;
+
+        span#secs{ font-size: 40px; opacity: 0.5;padding: 0.25em;}
+      }
+
+      h1#date{
+        font-weight: $font-weight;
+        font-size: 54px;
+        margin: 0;
+        padding: 0px 0 0 24px;
+        line-height:54px;
+      }
+    }
+
+    div#right-col{
+      float:right;
+      width:50%;
+
+      div#current_weather{
+        float: right;
+        width: 300px;
+        margin: 18px 0;
+
+        h1.temp{float:right; font-weight: $font-weight; font-size: 88px;line-height: 90px;padding:0;margin:0;}
+        h1.temp::after{content: "º"}
+        img.icon{
+          float: left;
+          margin: 24px 0 0;
+        }
+      }
+
+      ol{
+        float:right;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 300px;
+
+        li{
+          width: 100%;
+          height:72px;
+          float:left;
+          clear:both;
+          border-top:2px solid #555;
+
+          &#day_one_weather{ opacity: 1.0 }
+          &#day_two_weather{ opacity: 0.90 }
+          &#day_three_weather{ opacity: 0.85 }
+          &#day_four_weather{ opacity: 0.80 }
+          &#day_five_weather{ opacity: 0.75 }
+          &#day_six_weather{ opacity: 0.70 }
+
+          img.icon{float:right;margin: 12px 18px 0 0;}
+          h2{
+            float:left;
+            padding: 0;
+            margin: 0;
+            color: #fff;
+            font-weight: $bold-font-weight;
+            font-size: 30px;
+            line-height: 72px;
+
+            &.high_temp::after{content: " /"}
+            &.low_temp{padding-left: 0.33em;}
+          }
+        }
+      }
+
+    }
+  }
+}

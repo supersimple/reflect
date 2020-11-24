@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Informatic Display">
+    <meta name="author" content="Todd Resudek">
+    <%= csrf_meta_tag() %>
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,400" rel="stylesheet">
+    <link phx-track-static rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
+    <script defer phx-track-static type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
+  </head>
+  <body>
+    <%= @inner_content %>
+  </body>
+</html>
