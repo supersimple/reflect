@@ -3,7 +3,7 @@ defmodule ReflectWeb.PageLive do
 
   @clock_interval 1000
   @weather_interval :timer.minutes(15)
-  @timezone Application.compile_env(:reflect, :timezone)
+  @timezone Application.get_env(:reflect, :timezone)
 
   @impl true
   def mount(_params, _session, socket) do

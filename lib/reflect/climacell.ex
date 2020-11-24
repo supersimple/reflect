@@ -4,9 +4,8 @@ defmodule Reflect.ClimaCell do
   """
   alias Reflect.{Forecast, HTTP, Realtime}
 
-  @api_key Application.compile_env(:reflect, :climacell_api_key)
-  @forecast_latitude Application.compile_env(:reflect, :latitude)
-  @forecast_longitude Application.compile_env(:reflect, :longitude)
+  @forecast_latitude Application.get_env(:reflect, :latitude)
+  @forecast_longitude Application.get_env(:reflect, :longitude)
   @temp_units :f
 
   def forecast do
@@ -23,7 +22,7 @@ defmodule Reflect.ClimaCell do
     |> parse_response()
   end
 
-  defp api_key, do: @api_key
+  defp api_key, do: Application.get_env(:reflect, :climacell_api_key)
   defp latitude, do: @forecast_latitude
   defp longitude, do: @forecast_longitude
   defp fields, do: "temp,weather_code"
