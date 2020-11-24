@@ -5,7 +5,7 @@ defmodule Reflect.MixProject do
     [
       app: :reflect,
       version: "3.0.0",
-      elixir: "~> 1.10",
+      elixir: "~> 1.9",
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: [:phoenix, :gettext] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
